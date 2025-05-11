@@ -1,5 +1,5 @@
 import { type SanityDocument } from "next-sanity";
-import avatar from "../img/avatar.JPG";
+import avatar from "../img/avatar.webp";
 
 import { client } from "@/sanity/client";
 import Card from "@/components/Card";
