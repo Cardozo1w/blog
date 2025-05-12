@@ -19,13 +19,13 @@ export function SiteHeader() {
               Inicio
             </Link>
             <Link
-              href="#"
+              href="#about-me"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               Sobre mí
             </Link>
             <Link
-              href="#"
+              href="#contact"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
               Contacto
