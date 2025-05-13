@@ -156,14 +156,14 @@ export default async function IndexPage() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href="mailto:oscar1w2e@gmail.com"
+                href="mailto:oscar@cardoso.dev"
                 className="bg-card hover:bg-muted text-foreground p-4 rounded-full transition-colors"
               >
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
               </a>
             </div>
-            <a href="mailto:oscar1w2e@gmail.com">
+            <a href="mailto:oscar@cardoso.dev">
               <Button
                 asChild
                 className="bg-indigo-600 hover:bg-indigo-700 text-white"
