@@ -6,8 +6,6 @@ import Card from "@/components/Card";
 import { SiteHeader } from "@/components/site-header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
 import ContactSection from "@/components/contact-section";
 
 const POSTS_QUERY = `*[

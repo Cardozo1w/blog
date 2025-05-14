@@ -8,10 +8,10 @@ import {
   Zap,
   Database,
   Globe,
-  GitBranch,
-  Terminal,
+  // GitBranch,
+  // Terminal,
   Smartphone,
-  Settings,
+  // Settings,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +21,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Card from "@/components/Card";
 
 // Assets
-import project1 from "../../img/projects/my-dream-place.webp";
+// import project1 from "../../img/projects/my-dream-place.webp";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 
