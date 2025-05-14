@@ -31,7 +31,7 @@ const projects = [
     id: 1,
     title: "My Dream Place",
     description:
-      "Tienda online completa con carrito de compras, pagos y panel de administración.",
+      "My Dream Place se trata de un sitio web para una empresa ficticia de viajes, el objetivo de este proyecto fué demostrar el potencial de utiliar un sitio desacoplado del backend, permitiendo a los usuarios la modificación de contenido de una manera fácil y eficaz.",
     image: "/projects/my-dream-place.webp",
     link: "https://com-gatsby-drupal.vercel.app/",
     technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
@@ -41,7 +41,7 @@ const projects = [
     id: 2,
     title: "Labfem",
     description:
-      "Panel de control con visualización de datos en tiempo real y reportes personalizados.",
+      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y vibilidad las desigualdades dentro de la sociedad.",
     image: "/projects/labfem.webp",
     link: "https://www.labfem.vercel.app/",
     technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
