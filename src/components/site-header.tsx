@@ -24,6 +24,12 @@ export function SiteHeader() {
             >
               Sobre mí
             </Link>
+             <Link
+              href="/portfolio"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              Portafolio
+            </Link>
             <Link
               href="#contact"
               className="text-sm font-medium transition-colors hover:text-primary"
