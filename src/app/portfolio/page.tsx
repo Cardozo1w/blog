@@ -43,7 +43,7 @@ const projects = [
     description:
       "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y vibilidad las desigualdades dentro de la sociedad.",
     image: "/projects/labfem.webp",
-    link: "https://www.labfem.vercel.app/",
+    link: "https://labfem.vercel.app/",
     technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
     category: "web",
   },
