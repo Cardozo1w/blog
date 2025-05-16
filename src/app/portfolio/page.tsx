@@ -247,9 +247,10 @@ export default function PortfolioPage() {
                     {skillGroup.items.map((skill, skillIndex) => (
                       <Badge
                         key={skillIndex}
-                        className="flex items-center gap-1.5 py-1.5 px-3 bg-muted hover:bg-muted/80 text-slate-900 dark:text-slate-100"
+                        // className=" bg-muted hover:bg-muted/80 text-slate-900 dark:text-slate-100"
+                         className="bg-secondary dark:text-slate-100 flex items-center gap-1.5 py-1.5 px-3 text-slate-900"
                       >
-                        <span className="text-primary">{skill.icon}</span>
+                        <span className="text-indigo-700">{skill.icon}</span>
                         {skill.name}
                       </Badge>
                     ))}

@@ -80,7 +80,7 @@ const Card = ({
                   <Badge
                     key={index}
                     variant="secondary"
-                    className="bg-primary/60 text-primary hover:bg-primary/40"
+                    className="bg-secondary text-primary text-slate-900 dark:text-slate-100"
                   >
                     {tech}
                   </Badge>
