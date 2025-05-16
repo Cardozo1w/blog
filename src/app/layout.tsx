@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
+import AnalyticsTracker from './analytics-tracker';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -68,12 +70,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         {/* Script de GA4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-3WJHMT4J4Z`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-3WJHMT4J4Z', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange={false}
         >
+          <AnalyticsTracker />
           {children}
         </ThemeProvider>
       </body>

@@ -47,46 +47,6 @@ const projects = [
     technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
     category: "web",
   },
-  //   {
-  //     id: 3,
-  //     title: "App de Gestión de Tareas",
-  //     description:
-  //       "Aplicación para organizar proyectos y tareas con colaboración en tiempo real.",
-  //     image: "/placeholder.svg?height=600&width=800",
-  //     link: "https://tasks-example.com",
-  //     technologies: ["Vue.js", "Node.js", "MongoDB", "Socket.io"],
-  //     category: "app",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Blog Personal",
-  //     description:
-  //       "Blog minimalista con sistema de gestión de contenidos personalizado.",
-  //     image: "/placeholder.svg?height=600&width=800",
-  //     link: "https://blog-example.com",
-  //     technologies: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-  //     category: "web",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Plataforma Educativa",
-  //     description:
-  //       "Sistema de gestión de cursos online con videos, evaluaciones y certificaciones.",
-  //     image: "/placeholder.svg?height=600&width=800",
-  //     link: "https://education-example.com",
-  //     technologies: ["React", "Express", "PostgreSQL", "AWS"],
-  //     category: "web",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Aplicación de Finanzas Personales",
-  //     description:
-  //       "App para seguimiento de gastos, presupuestos y metas financieras.",
-  //     image: "/placeholder.svg?height=600&width=800",
-  //     link: "https://finance-example.com",
-  //     technologies: ["React Native", "Redux", "Firebase", "Victory Charts"],
-  //     category: "app",
-  //   },
 ];
 
 // Datos de habilidades (rediseñados sin niveles de progreso)
