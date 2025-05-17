@@ -1,7 +1,6 @@
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Card from "@/components/Card";
-import { SiteHeader } from "@/components/site-header";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import ContactSection from "@/components/contact-section";

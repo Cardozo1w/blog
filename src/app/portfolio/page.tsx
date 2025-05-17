@@ -8,7 +8,6 @@ import {
   Globe,
   Smartphone,
 } from "lucide-react";
-import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Card from "@/components/Card";
@@ -163,8 +162,6 @@ const skills = [
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
-
       {/* Hero Section */}
       <section className="relative bg-slate-100 dark:bg-muted/30 py-16 md:py-20">
         <div className="container mx-auto px-4">
