@@ -1,5 +1,3 @@
-// import Image from "next/image"
-// import Link from "next/link"
 import {
   Code,
   Server,
@@ -8,20 +6,14 @@ import {
   Zap,
   Database,
   Globe,
-  // GitBranch,
-  // Terminal,
   Smartphone,
-  // Settings,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
-// import { Button } from "@/components/ui/button"
-// import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Card from "@/components/Card";
 
 // Assets
-// import project1 from "../../img/projects/my-dream-place.webp";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 
@@ -29,6 +21,42 @@ import ContactSection from "@/components/contact-section";
 const projects = [
   {
     id: 1,
+    title: "Blog | Oscar Cardoso",
+    description: "Blog personal y portafoio hecho con Nextjs y Sanity.",
+    image: "/projects/blog-cardoso.webp",
+    link: "https://www.cardoso.dev/",
+    technologies: ["Nextjs", "Tailwind CSS", "Sanity", "Vercel"],
+    category: "web",
+  },
+  {
+    id: 2,
+    title: "Sistema de rifas",
+    description:
+      "Aplicacion para manejar numeros disponibles en una rifa, con dashboard administrable protegido por autenticación.",
+    image: "/projects/raffle-system.webp",
+    link: "https://v0-raffle-ticket-interface.vercel.app/",
+    technologies: [
+      "Nextjs",
+      "Shadcn",
+      "V0",
+      "Tailwind CSS",
+      "Supabase",
+      "Vercel",
+    ],
+    category: "app",
+  },
+  {
+    id: 3,
+    title: "Labfem",
+    description:
+      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y vibilidad las desigualdades dentro de la sociedad.",
+    image: "/projects/labfem.webp",
+    link: "https://labfem.vercel.app/",
+    technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
+    category: "web",
+  },
+  {
+    id: 4,
     title: "My Dream Place",
     description:
       "My Dream Place se trata de un sitio web para una empresa ficticia de viajes, el objetivo de este proyecto fué demostrar el potencial de utiliar un sitio desacoplado del backend, permitiendo a los usuarios la modificación de contenido de una manera fácil y eficaz.",
@@ -38,13 +66,36 @@ const projects = [
     category: "web",
   },
   {
-    id: 2,
-    title: "Labfem",
-    description:
-      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y vibilidad las desigualdades dentro de la sociedad.",
-    image: "/projects/labfem.webp",
-    link: "https://labfem.vercel.app/",
-    technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
+    id: 5,
+    title: "Hotel Gatsby Site",
+    description: "Sitio construido con Gatsby, Graphql y DatoCMS",
+    image: "/projects/hotel-gatsby-site.webp",
+    link: "https://hotel-gatsby-site.netlify.app/",
+    technologies: [
+      "Gatsby",
+      "Styled components",
+      "DatoCMS",
+      "Graphql",
+      "Netlify",
+    ],
+    category: "web",
+  },
+  {
+    id: 6,
+    title: "Blog Cafe",
+    description: "Sitio construido con HTML y CSS",
+    image: "/projects/blog-cafe.webp",
+    link: "https://cardoso2.netlify.app/",
+    technologies: ["HTML", "CSS", "Netlify"],
+    category: "web",
+  },
+   {
+    id: 7,
+    title: "Bienes Raices",
+    description: "Sitio construido con HTML y CSS",
+    image: "/projects/bienes-raices.webp",
+    link: "https://cardoso1.netlify.app/",
+    technologies: ["HTML", "CSS", "Netlify"],
     category: "web",
   },
 ];
@@ -97,7 +148,7 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="relative bg-slate-100 dark:bg-muted/30 py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
               Portafolio
             </h1>
@@ -111,7 +162,7 @@ export default function PortfolioPage() {
       {/* Projects Section */}
       <section id="proyectos" className="my-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-foreground">
               Proyectos
             </h2>
@@ -184,7 +235,7 @@ export default function PortfolioPage() {
       {/* Skills Section - Rediseñada sin barras de progreso */}
       <section className="py-16 bg-slate-100 dark:bg-muted/30" id="habilidades">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-foreground">
               Habilidades Técnicas
             </h2>
@@ -208,7 +259,7 @@ export default function PortfolioPage() {
                       <Badge
                         key={skillIndex}
                         // className=" bg-muted hover:bg-muted/80 text-slate-900 dark:text-slate-100"
-                         className="bg-secondary dark:text-slate-100 flex items-center gap-1.5 py-1.5 px-3 text-slate-900"
+                        className="bg-secondary dark:text-slate-100 flex items-center gap-1.5 py-1.5 px-3 text-slate-900"
                       >
                         <span className="text-indigo-700">{skill.icon}</span>
                         {skill.name}

@@ -44,7 +44,7 @@ const Card = ({
           />
         </div>
 
-        <div className="p-4 flex flex-col flex-1">
+        <div className="p-6 flex flex-col flex-1">
           {/* Header (tag + icon) */}
           {!isTechCard && (
             <div className="flex w-full justify-between items-center mb-2">
