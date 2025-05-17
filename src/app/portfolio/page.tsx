@@ -22,9 +22,10 @@ const projects = [
   {
     id: 1,
     title: "Blog | Oscar Cardoso",
-    description: "Blog personal y portafoio hecho con Nextjs y Sanity.",
+    description: "Blog personal y portafolio hecho con Nextjs y Sanity.",
     image: "/projects/blog-cardoso.webp",
-    link: "https://www.cardoso.dev/",
+    projectUrl: "https://www.cardoso.dev/",
+    sourceCodeUrl: "https://github.com/Cardozo1w/blog",
     technologies: ["Nextjs", "Tailwind CSS", "Sanity", "Vercel"],
     category: "web",
   },
@@ -34,7 +35,8 @@ const projects = [
     description:
       "Aplicacion para manejar numeros disponibles en una rifa, con dashboard administrable protegido por autenticación.",
     image: "/projects/raffle-system.webp",
-    link: "https://v0-raffle-ticket-interface.vercel.app/",
+    projectUrl: "https://v0-raffle-ticket-interface.vercel.app/",
+    sourceCodeUrl: "https://github.com/Cardozo1w/raffle-system",
     technologies: [
       "Nextjs",
       "Shadcn",
@@ -42,6 +44,7 @@ const projects = [
       "Tailwind CSS",
       "Supabase",
       "Vercel",
+      "CI/CD",
     ],
     category: "app",
   },
@@ -49,10 +52,18 @@ const projects = [
     id: 3,
     title: "Labfem",
     description:
-      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y vibilidad las desigualdades dentro de la sociedad.",
+      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y visibilidad las desigualdades dentro de la sociedad.",
     image: "/projects/labfem.webp",
-    link: "https://labfem.vercel.app/",
-    technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
+    projectUrl: "https://labfem.vercel.app/",
+    sourceCodeUrl: "https://github.com/Cardozo1w/labfem",
+    technologies: [
+      "Gatsby",
+      "Tailwind CSS",
+      "Drupal",
+      "Graphql",
+      "Vercel",
+      "CI/CD",
+    ],
     category: "web",
   },
   {
@@ -61,8 +72,16 @@ const projects = [
     description:
       "My Dream Place se trata de un sitio web para una empresa ficticia de viajes, el objetivo de este proyecto fué demostrar el potencial de utiliar un sitio desacoplado del backend, permitiendo a los usuarios la modificación de contenido de una manera fácil y eficaz.",
     image: "/projects/my-dream-place.webp",
-    link: "https://com-gatsby-drupal.vercel.app/",
-    technologies: ["Gatsby", "Tailwind CSS", "Drupal", "Graphql", "Vercel"],
+    projectUrl: "https://com-gatsby-drupal.vercel.app/",
+    sourceCodeUrl: "https://github.com/Cardoso1205/com.gatsby.drupal",
+    technologies: [
+      "Gatsby",
+      "Tailwind CSS",
+      "Drupal",
+      "Graphql",
+      "Vercel",
+      "CI/CD",
+    ],
     category: "web",
   },
   {
@@ -70,7 +89,8 @@ const projects = [
     title: "Hotel Gatsby Site",
     description: "Sitio construido con Gatsby, Graphql y DatoCMS",
     image: "/projects/hotel-gatsby-site.webp",
-    link: "https://hotel-gatsby-site.netlify.app/",
+    projectUrl: "https://hotel-gatsby-site.netlify.app/",
+    sourceCodeUrl: "https://github.com/Cardozo1w/hotel-gatsby",
     technologies: [
       "Gatsby",
       "Styled components",
@@ -85,16 +105,16 @@ const projects = [
     title: "Blog Cafe",
     description: "Sitio construido con HTML y CSS",
     image: "/projects/blog-cafe.webp",
-    link: "https://cardoso2.netlify.app/",
+    projectUrl: "https://cardoso2.netlify.app/",
     technologies: ["HTML", "CSS", "Netlify"],
     category: "web",
   },
-   {
+  {
     id: 7,
     title: "Bienes Raices",
     description: "Sitio construido con HTML y CSS",
     image: "/projects/bienes-raices.webp",
-    link: "https://cardoso1.netlify.app/",
+    projectUrl: "https://cardoso1.netlify.app/",
     technologies: ["HTML", "CSS", "Netlify"],
     category: "web",
   },
@@ -182,11 +202,13 @@ export default function PortfolioPage() {
                   <Card
                     key={project.id}
                     title={project.title}
-                    to={project.link}
+                    projectUrl={project.projectUrl}
+                    sourceCodeUrl={project.sourceCodeUrl}
+                    to={project.projectUrl}
                     description={project.description}
                     image={project.image}
                     badges={project.technologies}
-                    isTechCard
+                    variant="project"
                   />
                 ))}
               </TabsContent>
@@ -201,11 +223,12 @@ export default function PortfolioPage() {
                     <Card
                       key={project.id}
                       title={project.title}
-                      to={project.link}
+                      projectUrl={project.projectUrl}
+                      to={project.projectUrl}
                       description={project.description}
                       image={project.image}
                       badges={project.technologies}
-                      isTechCard
+                      variant="project"
                     />
                   ))}
               </TabsContent>
@@ -220,11 +243,12 @@ export default function PortfolioPage() {
                     <Card
                       key={project.id}
                       title={project.title}
-                      to={project.link}
+                      projectUrl={project.projectUrl}
+                      to={project.projectUrl}
                       description={project.description}
                       image={project.image}
                       badges={project.technologies}
-                      isTechCard
+                      variant="project"
                     />
                   ))}
               </TabsContent>

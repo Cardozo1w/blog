@@ -1,6 +1,4 @@
 import { type SanityDocument } from "next-sanity";
-import avatar from "../img/avatar.webp";
-
 import { client } from "@/sanity/client";
 import Card from "@/components/Card";
 import { SiteHeader } from "@/components/site-header";
@@ -43,12 +41,16 @@ export default async function IndexPage() {
             {posts.map((post) => (
               <li key={post._id}>
                 <Card
+                  image="/og-image.jpg"
                   to={`/${post.slug.current}`}
                   title={post.title}
-                  publishedDate={post.publishedAt}
                   avatar={{
-                    src: avatar.src,
+                    src: "/avatar.webp",
                     alt: "",
+                  }}
+                  author={{
+                    date: post.publishedAt,
+                    name: "Oscar Cardoso"
                   }}
                 />
               </li>
