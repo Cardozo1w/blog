@@ -18,7 +18,7 @@ export default async function IndexPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SiteHeader />
+      {/* <SiteHeader /> */}
       <section className="relative bg-slate-100 dark:bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-4">

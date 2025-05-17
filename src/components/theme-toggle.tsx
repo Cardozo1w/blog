@@ -31,7 +31,7 @@ export function ThemeToggle() {
   }
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center mr-4">
       <Sun className="h-4 w-4 text-zinc-500 mr-2" />
       <button
         onClick={toggleTheme}

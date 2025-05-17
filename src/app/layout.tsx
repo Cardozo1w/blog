@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
 import AnalyticsTracker from './analytics-tracker';
+import { SiteHeader } from "@/components/site-header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -112,6 +113,7 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <AnalyticsTracker />
+          <SiteHeader />
           {children}
         </ThemeProvider>
       </body>

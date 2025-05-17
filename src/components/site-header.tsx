@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileMenu } from "./mobile-menu";
 
 export function SiteHeader() {
   return (
@@ -24,7 +25,7 @@ export function SiteHeader() {
             >
               Sobre mí
             </Link>
-             <Link
+            <Link
               href="/portfolio"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
@@ -38,6 +39,7 @@ export function SiteHeader() {
             </Link>
           </div>
           <ThemeToggle />
+          <MobileMenu />
         </div>
       </div>
     </nav>
