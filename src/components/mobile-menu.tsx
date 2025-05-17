@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Home, User, Briefcase, Mail, ChevronRight } from "lucide-react"
+import { Menu, X, Home, User, Briefcase, Mail, ChevronRight, FilePen } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 
@@ -43,10 +43,23 @@ export function MobileMenu() {
 
   const menuItems = [
     { title: "Inicio", href: "/", icon: <Home className="w-5 h-5" /> },
-    { title: "Sobre mí", href: "/sobre-mi", icon: <User className="w-5 h-5" /> },
-    { title: "Portafolio", href: "/portafolio", icon: <Briefcase className="w-5 h-5" /> },
-    { title: "Contacto", href: "/contacto", icon: <Mail className="w-5 h-5" /> },
-  ]
+    {
+      title: "Posts",
+      href: "/#posts",
+      icon: <FilePen className="w-5 h-5" />,
+    },
+    {
+      title: "Sobre mí",
+      href: "/#about-me",
+      icon: <User className="w-5 h-5" />,
+    },
+    {
+      title: "Portafolio",
+      href: "/portfolio",
+      icon: <Briefcase className="w-5 h-5" />,
+    },
+    { title: "Contacto", href: "#contact", icon: <Mail className="w-5 h-5" /> },
+  ];
 
   if (!mounted) return null
 

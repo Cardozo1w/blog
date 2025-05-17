@@ -19,6 +19,12 @@ export function SiteHeader() {
             >
               Inicio
             </Link>
+              <Link
+              href="/#posts"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              Posts
+            </Link>
             <Link
               href="#about-me"
               className="text-sm font-medium transition-colors hover:text-primary"
