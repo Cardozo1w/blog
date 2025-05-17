@@ -108,7 +108,7 @@ export function MobileMenu() {
 
               {/* Elementos del menú */}
               <div className="flex flex-col space-y-1">
-                {menuItems.map((item, index) => (
+                {menuItems.map((item) => (
                   <motion.div
                     key={item.title}
                     initial={{ opacity: 0, x: 20 }}
