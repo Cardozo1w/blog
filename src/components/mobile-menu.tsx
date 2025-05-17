@@ -8,7 +8,7 @@ import { useTheme } from "next-themes"
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
-  const { theme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   // Evitar problemas de hidratación
@@ -50,7 +50,9 @@ export function MobileMenu() {
 
   if (!mounted) return null
 
-  const isDark = theme === "dark"
+
+  const currentTheme = theme === "system" ? resolvedTheme : theme
+  const isDark = currentTheme === "dark"
 
   return (
     <div className="relative z-50 lg:hidden">
