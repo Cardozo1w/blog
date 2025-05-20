@@ -21,5 +21,9 @@
   "Footer": {
     "description": "Web Developer & Content Creator",
     "copyright": "All rights reserved."
+  },
+  "Post": {
+    "published": "Published",
+    "backToPosts": "Back to posts"
   }
 }

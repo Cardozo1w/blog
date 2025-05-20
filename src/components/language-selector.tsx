@@ -46,7 +46,15 @@ export function LanguageSelector() {
 
   const handleLanguageChange = (language: Language) => {
     setCurrentLanguage(language);
-    router.push(`/${language.code}`);
+    const langsToCheck = ["en", "es-mx"];
+    let newPath = pathname;
+
+    const foundLang = langsToCheck.find((lang) => pathname.includes(lang));
+    if (foundLang && foundLang !== language.code) {
+      newPath = pathname.replace(foundLang, language.code);
+    }
+
+    router.push(`${newPath}`);
   };
 
   return (
