@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import ContactSection from "@/components/contact-section";
+// import { getTranslations } from "next-intl/server";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -14,6 +15,8 @@ const options = { next: { revalidate: 30 } };
 
 export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+
+//   const t = await getTranslations("HomePage");
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -49,7 +52,7 @@ export default async function IndexPage() {
                   }}
                   author={{
                     date: post.publishedAt,
-                    name: "Oscar Cardoso"
+                    name: "Oscar Cardoso",
                   }}
                 />
               </li>

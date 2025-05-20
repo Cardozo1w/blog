@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
-import AnalyticsTracker from './analytics-tracker';
+import AnalyticsTracker from "../analytics-tracker";
 import { SiteHeader } from "@/components/site-header";
+import "../globals.css";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -61,13 +64,20 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{locale: string}>;
+}) {
+  // Ensure that the incoming `locale` is valid
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link
           rel="icon"
@@ -113,8 +123,10 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <AnalyticsTracker />
-          <SiteHeader />
-          {children}
+          <NextIntlClientProvider>
+            <SiteHeader />
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

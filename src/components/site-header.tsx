@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { MobileMenu } from "./mobile-menu";
+import { LanguageSelector } from "./language-selector";
 
 export function SiteHeader() {
   return (
@@ -19,7 +20,7 @@ export function SiteHeader() {
             >
               Inicio
             </Link>
-              <Link
+            <Link
               href="/#posts"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
@@ -44,7 +45,10 @@ export function SiteHeader() {
               Contacto
             </Link>
           </div>
-          <ThemeToggle />
+          <div className="mr-4 lg:mr-0 flex gap-4">
+            <ThemeToggle />
+            <LanguageSelector />
+          </div>
           <MobileMenu />
         </div>
       </div>
