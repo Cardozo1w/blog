@@ -22,10 +22,7 @@ const options = { next: { revalidate: 30 } };
 
 export default async function PostPage({ params }: { params: Promise<Props> }) {
   const { locale, slug } = await params;
-
-  console.log("pathname", `/${locale}/${slug}`);
   
-
   const post = await client.fetch<SanityDocument>(
     POST_QUERY,
     { slug: `/${locale}/${slug}` },
