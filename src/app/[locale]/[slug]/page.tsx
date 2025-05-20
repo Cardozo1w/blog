@@ -3,7 +3,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
 import Link from "next/link";
-import { SiteHeader } from "@/components/site-header";
 import Footer from "@/components/footer";
 
 interface Props {
