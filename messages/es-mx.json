@@ -1,6 +1,25 @@
 {
+  "Navigation": {
+    "home": "Inicio",
+    "posts": "Posts",
+    "about": "Sobre mí",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  },
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "heroTitle": "Blog | Oscar Cardoso",
+    "heroAbout": "Soy desarrollador web y en este espacio comparto experiencias, aprendizajes y reflexiones sobre desarrollo y tecnología.",
+    "aboutTitle": "Sobre mí",
+    "aboutDescription": "Soy desarrollador web y en este espacio comparto experiencias, aprendizajes y reflexiones sobre desarrollo y tecnología. Cada publicación está basada en casos reales, ideas bien pensadas y herramientas que realmente uso en el día a día.",
+    "aboutDescription2": "Este blog está hecho para desarrolladores, entusiastas tech y para quienes disfrutan entender cómo funciona el mundo digital desde dentro."
+  },
+  "Contact": {
+    "title": "Contacto",
+    "description": "Puedes contactarme en cualquiera de mis redes sociales o enviando un email directamente :)",
+    "button": "Enviar email"
+  },
+  "Footer": {
+    "description": "Desarrollador web & Creador de contenido",
+    "copyright": "Todos los derechos reservados."
   }
 }

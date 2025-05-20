@@ -6,6 +6,11 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import Footer from "@/components/footer";
 
+interface Props {
+    locale: string;
+    slug: string;
+}
+
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 
 const { projectId, dataset } = client.config();
@@ -16,14 +21,15 @@ const urlFor = (source: SanityImageSource) =>
 
 const options = { next: { revalidate: 30 } };
 
-export default async function PostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function PostPage({ params }: { params: Promise<Props> }) {
+  const { locale, slug } = await params;
+
+  console.log("pathname", `/${locale}/${slug}`);
+  
+
   const post = await client.fetch<SanityDocument>(
     POST_QUERY,
-    await params,
+    { slug: `/${locale}/${slug}` },
     options
   );
   const postImageUrl = post.image
@@ -32,7 +38,6 @@ export default async function PostPage({
 
   return (
     <div className="min-h-screen">
-      <SiteHeader />
       <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4 blog">
         <Link href="/" className="hover:underline">
           ← Back to posts

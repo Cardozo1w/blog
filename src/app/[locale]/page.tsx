@@ -4,19 +4,32 @@ import Card from "@/components/Card";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import ContactSection from "@/components/contact-section";
-// import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+interface Props {
+  params: {
+    locale: string;
+  };
+}
 
-const POSTS_QUERY = `*[
-  _type == "post"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+const POSTS_QUERY = `*[_type == "post" && language == $language]{
+  title,
+  slug,
+  language,
+  "_translations": *[_type == "translation.metadata" && references(^._id)].translations[].value->{
+    title,
+    slug,
+    language,
+    publishedAt
+  },
+}`;
 
 const options = { next: { revalidate: 30 } };
 
-export default async function IndexPage() {
-  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
-
-//   const t = await getTranslations("HomePage");
+export default async function IndexPage({ params }: Props) {
+  const { locale } = params;
+  
+  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {language: locale}, options);
+  const t = await getTranslations("HomePage");
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,11 +38,10 @@ export default async function IndexPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Blog | Oscar Cardoso
+              {t("heroTitle")}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Soy desarrollador web y en este espacio comparto experiencias,
-              aprendizajes y reflexiones sobre desarrollo y tecnología.
+              {t("heroAbout")}
             </p>
           </div>
         </div>
@@ -67,21 +79,11 @@ export default async function IndexPage() {
             <div className="grid grid-cols-1 gap-8">
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-foreground">
-                  Sobre mí
+                  {t("aboutTitle")}
                 </h2>
                 <div className="prose prose-lg dark:prose-invert">
-                  <p>
-                    Soy desarrollador web y en este espacio comparto
-                    experiencias, aprendizajes y reflexiones sobre desarrollo y
-                    tecnología. Cada publicación está basada en casos reales,
-                    ideas bien pensadas y herramientas que realmente uso en el
-                    día a día.
-                  </p>
-                  <p>
-                    Este blog está hecho para desarrolladores, entusiastas tech
-                    y para quienes disfrutan entender cómo funciona el mundo
-                    digital desde dentro.
-                  </p>
+                  <p>{t("aboutDescription")}</p>
+                  <p>{t("aboutDescription2")}</p>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Badge className="bg-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">

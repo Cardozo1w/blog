@@ -1,16 +1,21 @@
 import { Mail } from "lucide-react";
 import React from "react";
 import { Button } from "./ui/button";
+import {useTranslations} from 'next-intl';
+
 
 const ContactSection = () => {
+    const t = useTranslations('Contact');
+
   return (
     <section className="py-16" id="contact">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Contacto</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">
+            {t("title")}
+          </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Puedes contactarme en cualquiera de mis redes sociales o enviando un
-            email directamente :)
+            {t("description")}
           </p>
 
           <div className="flex justify-center space-x-4 mb-8">
@@ -67,7 +72,7 @@ const ContactSection = () => {
               asChild
               className="bg-indigo-600 hover:bg-indigo-700 text-white"
             >
-              <Mail className="mr-2 h-4 w-4" /> Enviar email
+              <Mail className="mr-2 h-4 w-4" /> {t("button")}
             </Button>
           </a>
         </div>
