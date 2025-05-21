@@ -13,6 +13,13 @@
     "aboutDescription": "Soy desarrollador web y en este espacio comparto experiencias, aprendizajes y reflexiones sobre desarrollo y tecnología. Cada publicación está basada en casos reales, ideas bien pensadas y herramientas que realmente uso en el día a día.",
     "aboutDescription2": "Este blog está hecho para desarrolladores, entusiastas tech y para quienes disfrutan entender cómo funciona el mundo digital desde dentro."
   },
+  "Portfolio": {
+    "heroTitle": "Portafolio",
+    "heroAbout": "Una selección de mis proyectos más recientes y las tecnologías con las que trabajo.",
+    "projectsTitle": "Proyectos",
+    "skillsTitle": "Habilidades Técnicas",
+    "all": "Todos"
+  },
   "Contact": {
     "title": "Contacto",
     "description": "Puedes contactarme en cualquiera de mis redes sociales o enviando un email directamente :)",
@@ -22,7 +29,7 @@
     "description": "Desarrollador web & Creador de contenido",
     "copyright": "Todos los derechos reservados."
   },
-   "Post": {
+  "Post": {
     "published": "Publicado",
     "backToPosts": "Regresar a los posts"
   }

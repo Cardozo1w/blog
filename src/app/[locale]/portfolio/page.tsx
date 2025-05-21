@@ -15,6 +15,7 @@ import Card from "@/components/Card";
 // Assets
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
+import { useTranslations } from "next-intl";
 
 // Datos de proyectos
 const projects = [
@@ -51,7 +52,7 @@ const projects = [
     id: 3,
     title: "Labfem",
     description:
-      "Labfem nace de la necesidad de informar a las mujeres sobre sus derechos y visibilidad las desigualdades dentro de la sociedad.",
+      "Labfem surge para celebrar y visibilizar las voces, talentos y logros de mujeres que inspiran con su labor y compromiso.",
     image: "/projects/labfem.webp",
     projectUrl: "https://labfem.vercel.app/",
     sourceCodeUrl: "https://github.com/Cardozo1w/labfem",
@@ -160,6 +161,7 @@ const skills = [
 ];
 
 export default function PortfolioPage() {
+  const t = useTranslations("Portfolio")
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -167,11 +169,10 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
-              Portafolio
+              {t("heroTitle")}
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Una selección de mis proyectos más recientes y las tecnologías con
-              las que trabajo.
+              {t("heroAbout")}
             </p>
           </div>
         </div>
@@ -181,12 +182,12 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-foreground">
-              Proyectos
+              {t("projectsTitle")}
             </h2>
 
             <Tabs defaultValue="all" className="mb-8">
               <TabsList className="mb-6">
-                <TabsTrigger value="all">Todos</TabsTrigger>
+                <TabsTrigger value="all">{t("all")}</TabsTrigger>
                 <TabsTrigger value="web">Web</TabsTrigger>
                 <TabsTrigger value="app">Apps</TabsTrigger>
               </TabsList>
@@ -258,7 +259,7 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-foreground">
-              Habilidades Técnicas
+              {t("skillsTitle")}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

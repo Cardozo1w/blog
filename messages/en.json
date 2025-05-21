@@ -13,6 +13,13 @@
     "aboutDescription": "I’m a web developer and in this space I share experiences, learnings, and reflections on development and technology. Each post is based on real cases, well-thought-out ideas, and tools I actually use day to day.",
     "aboutDescription2": "This blog is made for developers, tech enthusiasts, and anyone who enjoys understanding how the digital world works from the inside."
   },
+  "Portfolio": {
+    "heroTitle": "Portfolio",
+    "heroAbout": "A selection of my most recent projects and the technologies I work with.",
+    "projectsTitle": "Projects",
+    "skillsTitle": "Technical Skills",
+    "all": "All"
+  },
   "Contact": {
     "title": "Contact",
     "description": "You can reach me on any of my social networks or by sending an email directly :)",
