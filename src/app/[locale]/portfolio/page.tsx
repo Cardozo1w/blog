@@ -17,7 +17,7 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import { useTranslations } from "next-intl";
 
-export function useProjectData() {
+function useProjectData() {
   const projectT = useTranslations("Projects");
 
   const projects = [
@@ -116,7 +116,7 @@ export function useProjectData() {
       projectUrl: "https://cardoso1.netlify.app/",
       technologies: ["HTML", "CSS", "Netlify"],
       category: "web",
-    }
+    },
   ];
 
   return projects;
@@ -163,8 +163,8 @@ const skills = [
 ];
 
 export default function PortfolioPage() {
-  const t = useTranslations("Portfolio")
-  const projects = useProjectData()
+  const t = useTranslations("Portfolio");
+  const projects = useProjectData();
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
