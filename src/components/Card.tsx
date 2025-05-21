@@ -4,6 +4,7 @@ import { Badge } from "./ui/badge"
 import { Github, Code, ArrowUpRight } from "lucide-react"
 import { Button } from "./ui/button"
 import { format } from "date-fns"
+import { useTranslations } from "next-intl"
 
 type CardVariant = "blog" | "project"
 
@@ -40,6 +41,8 @@ const Card = ({
   author,
   category = "Experiences",
 }: CardProps) => {
+  const t = useTranslations("Card")
+
   // Contenido común para ambas variantes
   const imageContent = (
     <div className="relative h-48 w-full overflow-hidden rounded-t-md">
@@ -66,13 +69,21 @@ const Card = ({
           {/* Título clickeable */}
           <div className="flex-grow">
             <Link href={to} className="no-underline">
-              <h3 className="text-lg font-semibold mb-4 hover:text-primary transition-colors">{title}</h3>
+              <h3 className="text-lg font-semibold mb-4 hover:text-primary transition-colors">
+                {title}
+              </h3>
             </Link>
-            {description && <p className="text-muted-foreground">{description}</p>}
+            {description && (
+              <p className="text-muted-foreground">{description}</p>
+            )}
             {badges && (
               <div className="flex flex-wrap gap-2 my-4">
                 {badges.map((tech, index) => (
-                  <Badge key={index} variant="secondary" className="bg-secondary text-slate-900 dark:text-slate-100">
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="bg-secondary text-slate-900 dark:text-slate-100"
+                  >
                     {tech}
                   </Badge>
                 ))}
@@ -84,18 +95,38 @@ const Card = ({
           <div className="mt-auto pt-4 border-t">
             <div className="flex flex-col gap-2">
               {projectUrl && (
-                <Button variant="ghost" size="sm" className="justify-start px-2 hover:bg-secondary" asChild>
-                  <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="justify-start px-2 hover:bg-secondary"
+                  asChild
+                >
+                  <a
+                    href={projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                     <Code className="h-4 w-4" />
-                    <span>Ver proyecto</span>
+                    <span>{t("viewProject")}</span>
                   </a>
                 </Button>
               )}
               {sourceCodeUrl && (
-                <Button variant="ghost" size="sm" className="justify-start px-2 hover:bg-secondary" asChild>
-                  <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="justify-start px-2 hover:bg-secondary"
+                  asChild
+                >
+                  <a
+                    href={sourceCodeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                     <Github className="h-4 w-4" />
-                    <span>Ver código fuente</span>
+                    <span>{t("viewSource")}</span>
                   </a>
                 </Button>
               )}
@@ -103,7 +134,7 @@ const Card = ({
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   // Variante "blog" (por defecto)

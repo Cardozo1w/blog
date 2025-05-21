@@ -20,6 +20,26 @@
     "skillsTitle": "Habilidades Técnicas",
     "all": "Todos"
   },
+  "Projects": {
+    "blogCardosoTitle": "Blog | Oscar Cardoso",
+    "blogCardosoDescription": "Blog personal y portafolio hecho con Nextjs y Sanity.",
+    "raffleSystemTitle": "Sistema de rifas",
+    "raffleSystemDescription": "Aplicación para manejar números disponibles en una rifa, con dashboard administrable protegido por autenticación.",
+    "labfemTitle": "Labfem",
+    "labfemDescription": "Labfem surge para celebrar y visibilizar las voces, talentos y logros de mujeres que inspiran con su labor y compromiso.",
+    "myDreamPlaceTitle": "My Dream Place",
+    "myDreamPlaceDescription": "Sitio web para una empresa ficticia de viajes, hecho para demostrar el potencial de usar un frontend desacoplado con backend administrable.",
+    "hotelGatsbySiteTitle": "Hotel Gatsby Site",
+    "hotelGatsbySiteDescription": "Sitio construido con Gatsby, Graphql y DatoCMS.",
+    "blogCafeTitle": "Blog Café",
+    "blogCafeDescription": "Sitio construido con HTML y CSS.",
+    "bienesRaicesTitle": "Bienes Raíces",
+    "bienesRaicesDescription": "Sitio construido con HTML y CSS."
+  },
+  "Card": {
+    "viewProject": "Ver proyecto",
+    "viewSource": "Ver código fuente"
+  },
   "Contact": {
     "title": "Contacto",
     "description": "Puedes contactarme en cualquiera de mis redes sociales o enviando un email directamente :)",

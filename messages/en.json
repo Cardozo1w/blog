@@ -20,6 +20,26 @@
     "skillsTitle": "Technical Skills",
     "all": "All"
   },
+  "Projects": {
+    "blogCardosoTitle": "Blog | Oscar Cardoso",
+    "blogCardosoDescription": "Personal blog and portfolio built with Next.js and Sanity.",
+    "raffleSystemTitle": "Raffle System",
+    "raffleSystemDescription": "App to manage available numbers in a raffle, with an admin dashboard protected by authentication.",
+    "labfemTitle": "Labfem",
+    "labfemDescription": "Labfem was created to celebrate and highlight the voices, talents, and achievements of women who inspire through their work and commitment.",
+    "myDreamPlaceTitle": "My Dream Place",
+    "myDreamPlaceDescription": "My Dream Place is a website for a fictional travel company. The goal of this project was to demonstrate the potential of using a decoupled site from the backend, allowing users to easily and effectively modify content.",
+    "hotelGatsbySiteTitle": "Hotel Gatsby Site",
+    "hotelGatsbySiteDescription": "Site built with Gatsby, GraphQL, and DatoCMS.",
+    "blogCafeTitle": "Blog Cafe",
+    "blogCafeDescription": "Site built with HTML and CSS.",
+    "bienesRaicesTitle": "Real Estate",
+    "bienesRaicesDescription": "Site built with HTML and CSS."
+  },
+  "Card": {
+    "viewProject": "View project",
+    "viewSource": "View source code"
+  },
   "Contact": {
     "title": "Contact",
     "description": "You can reach me on any of my social networks or by sending an email directly :)",

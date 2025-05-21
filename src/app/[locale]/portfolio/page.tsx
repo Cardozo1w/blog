@@ -17,108 +17,110 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import { useTranslations } from "next-intl";
 
-// Datos de proyectos
-const projects = [
-  {
-    id: 1,
-    title: "Blog | Oscar Cardoso",
-    description: "Blog personal y portafolio hecho con Nextjs y Sanity.",
-    image: "/projects/blog-cardoso.webp",
-    projectUrl: "https://www.cardoso.dev/",
-    sourceCodeUrl: "https://github.com/Cardozo1w/blog",
-    technologies: ["Nextjs", "Tailwind CSS", "Sanity", "Vercel"],
-    category: "web",
-  },
-  {
-    id: 2,
-    title: "Sistema de rifas",
-    description:
-      "Aplicacion para manejar numeros disponibles en una rifa, con dashboard administrable protegido por autenticación.",
-    image: "/projects/raffle-system.webp",
-    projectUrl: "https://v0-raffle-ticket-interface.vercel.app/",
-    sourceCodeUrl: "https://github.com/Cardozo1w/raffle-system",
-    technologies: [
-      "Nextjs",
-      "Shadcn",
-      "V0",
-      "Tailwind CSS",
-      "Supabase",
-      "Vercel",
-      "CI/CD",
-    ],
-    category: "app",
-  },
-  {
-    id: 3,
-    title: "Labfem",
-    description:
-      "Labfem surge para celebrar y visibilizar las voces, talentos y logros de mujeres que inspiran con su labor y compromiso.",
-    image: "/projects/labfem.webp",
-    projectUrl: "https://labfem.vercel.app/",
-    sourceCodeUrl: "https://github.com/Cardozo1w/labfem",
-    technologies: [
-      "Gatsby",
-      "Tailwind CSS",
-      "Drupal",
-      "Graphql",
-      "Vercel",
-      "CI/CD",
-    ],
-    category: "web",
-  },
-  {
-    id: 4,
-    title: "My Dream Place",
-    description:
-      "My Dream Place se trata de un sitio web para una empresa ficticia de viajes, el objetivo de este proyecto fué demostrar el potencial de utiliar un sitio desacoplado del backend, permitiendo a los usuarios la modificación de contenido de una manera fácil y eficaz.",
-    image: "/projects/my-dream-place.webp",
-    projectUrl: "https://com-gatsby-drupal.vercel.app/",
-    sourceCodeUrl: "https://github.com/Cardoso1205/com.gatsby.drupal",
-    technologies: [
-      "Gatsby",
-      "Tailwind CSS",
-      "Drupal",
-      "Graphql",
-      "Vercel",
-      "CI/CD",
-    ],
-    category: "web",
-  },
-  {
-    id: 5,
-    title: "Hotel Gatsby Site",
-    description: "Sitio construido con Gatsby, Graphql y DatoCMS",
-    image: "/projects/hotel-gatsby-site.webp",
-    projectUrl: "https://hotel-gatsby-site.netlify.app/",
-    sourceCodeUrl: "https://github.com/Cardozo1w/hotel-gatsby",
-    technologies: [
-      "Gatsby",
-      "Styled components",
-      "DatoCMS",
-      "Graphql",
-      "Netlify",
-    ],
-    category: "web",
-  },
-  {
-    id: 6,
-    title: "Blog Cafe",
-    description: "Sitio construido con HTML y CSS",
-    image: "/projects/blog-cafe.webp",
-    projectUrl: "https://cardoso2.netlify.app/",
-    technologies: ["HTML", "CSS", "Netlify"],
-    category: "web",
-  },
-  {
-    id: 7,
-    title: "Bienes Raices",
-    description: "Sitio construido con HTML y CSS",
-    image: "/projects/bienes-raices.webp",
-    projectUrl: "https://cardoso1.netlify.app/",
-    technologies: ["HTML", "CSS", "Netlify"],
-    category: "web",
-  },
-];
+export function useProjectData() {
+  const projectT = useTranslations("Projects");
+
+  const projects = [
+    {
+      id: 1,
+      title: projectT("blogCardosoTitle"),
+      description: projectT("blogCardosoDescription"),
+      image: "/projects/blog-cardoso.webp",
+      projectUrl: "https://www.cardoso.dev/",
+      sourceCodeUrl: "https://github.com/Cardozo1w/blog",
+      technologies: ["Nextjs", "Tailwind CSS", "Sanity", "Vercel"],
+      category: "web",
+    },
+    {
+      id: 2,
+      title: projectT("raffleSystemTitle"),
+      description: projectT("raffleSystemDescription"),
+      image: "/projects/raffle-system.webp",
+      projectUrl: "https://v0-raffle-ticket-interface.vercel.app/",
+      sourceCodeUrl: "https://github.com/Cardozo1w/raffle-system",
+      technologies: [
+        "Nextjs",
+        "Shadcn",
+        "V0",
+        "Tailwind CSS",
+        "Supabase",
+        "Vercel",
+        "CI/CD",
+      ],
+      category: "app",
+    },
+    {
+      id: 3,
+      title: projectT("labfemTitle"),
+      description: projectT("labfemDescription"),
+      image: "/projects/labfem.webp",
+      projectUrl: "https://labfem.vercel.app/",
+      sourceCodeUrl: "https://github.com/Cardozo1w/labfem",
+      technologies: [
+        "Gatsby",
+        "Tailwind CSS",
+        "Drupal",
+        "Graphql",
+        "Vercel",
+        "CI/CD",
+      ],
+      category: "web",
+    },
+    {
+      id: 4,
+      title: projectT("myDreamPlaceTitle"),
+      description: projectT("myDreamPlaceDescription"),
+      image: "/projects/my-dream-place.webp",
+      projectUrl: "https://com-gatsby-drupal.vercel.app/",
+      sourceCodeUrl: "https://github.com/Cardoso1205/com.gatsby.drupal",
+      technologies: [
+        "Gatsby",
+        "Tailwind CSS",
+        "Drupal",
+        "Graphql",
+        "Vercel",
+        "CI/CD",
+      ],
+      category: "web",
+    },
+    {
+      id: 5,
+      title: projectT("hotelGatsbySiteTitle"),
+      description: projectT("hotelGatsbySiteDescription"),
+      image: "/projects/hotel-gatsby-site.webp",
+      projectUrl: "https://hotel-gatsby-site.netlify.app/",
+      sourceCodeUrl: "https://github.com/Cardozo1w/hotel-gatsby",
+      technologies: [
+        "Gatsby",
+        "Styled components",
+        "DatoCMS",
+        "Graphql",
+        "Netlify",
+      ],
+      category: "web",
+    },
+    {
+      id: 6,
+      title: projectT("blogCafeTitle"),
+      description: projectT("blogCafeDescription"),
+      image: "/projects/blog-cafe.webp",
+      projectUrl: "https://cardoso2.netlify.app/",
+      technologies: ["HTML", "CSS", "Netlify"],
+      category: "web",
+    },
+    {
+      id: 7,
+      title: projectT("bienesRaicesTitle"),
+      description: projectT("bienesRaicesDescription"),
+      image: "/projects/bienes-raices.webp",
+      projectUrl: "https://cardoso1.netlify.app/",
+      technologies: ["HTML", "CSS", "Netlify"],
+      category: "web",
+    }
+  ];
+
+  return projects;
+}
 
 // Datos de habilidades (rediseñados sin niveles de progreso)
 const skills = [
@@ -162,6 +164,7 @@ const skills = [
 
 export default function PortfolioPage() {
   const t = useTranslations("Portfolio")
+  const projects = useProjectData()
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
