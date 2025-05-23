@@ -1,5 +1,5 @@
 import { type SanityDocument } from "next-sanity";
-import { client } from "@/sanity/client";
+import { client, urlFor } from "@/sanity/client";
 import Card from "@/components/Card";
 import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
@@ -15,12 +15,8 @@ const POSTS_QUERY = `*[_type == "post" && language == $language]{
   title,
   slug,
   language,
-  "_translations": *[_type == "translation.metadata" && references(^._id)].translations[].value->{
-    title,
-    slug,
-    language,
-    publishedAt
-  },
+  image,
+  publishedAt
 }`;
 
 const options = { next: { revalidate: 30 } };
@@ -33,7 +29,6 @@ export default async function IndexPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <SiteHeader /> */}
       <section className="relative bg-slate-100 dark:bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-4">
@@ -55,7 +50,7 @@ export default async function IndexPage({ params }: Props) {
             {posts.map((post) => (
               <li key={post.slug}>
                 <Card
-                  image="/og-image.jpg"
+                  image={urlFor(post.image).url()}
                   to={`/${post.slug.current}`}
                   title={post.title}
                   avatar={{
