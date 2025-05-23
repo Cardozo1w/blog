@@ -47,7 +47,7 @@ export default async function IndexPage({ params }: Props) {
             Posts
           </h2>
           <ul className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {posts.reverse().map((post) => (
               <li key={post.slug}>
                 <Card
                   image={urlFor(post.image).url()}
