@@ -21,6 +21,8 @@
     "all": "All"
   },
   "Projects": {
+    "iosCalculatorTitle": "iOS Calculator",
+    "iosCalculatorDescription": "iOS-inspired calculator built with React Native.",
     "blogCardosoTitle": "Blog | Oscar Cardoso",
     "blogCardosoDescription": "Personal blog and portfolio built with Next.js and Sanity.",
     "raffleSystemTitle": "Raffle System",

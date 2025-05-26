@@ -21,6 +21,8 @@
     "all": "Todos"
   },
   "Projects": {
+    "iosCalculatorTitle": "Calculadora iOS",
+    "iosCalculatorDescription": "Calculadora inspirada en iOS, desarrollada con React Native.",
     "blogCardosoTitle": "Blog | Oscar Cardoso",
     "blogCardosoDescription": "Blog personal y portafolio hecho con Nextjs y Sanity.",
     "raffleSystemTitle": "Sistema de rifas",

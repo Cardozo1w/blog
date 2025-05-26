@@ -21,6 +21,16 @@ function useProjectData() {
   const projectT = useTranslations("Projects");
 
   const projects = [
+     {
+      id: 0,
+      title: projectT("iosCalculatorTitle"),
+      description: projectT("iosCalculatorDescription"),
+      projectUrl: "",
+      image: "/projects/ios-calculator.webp",
+      sourceCodeUrl: "https://github.com/Cardozo1w/calculator-react-native",
+      technologies: ["React Native", "Typescript", "Android", "iOS"],
+      category: "app",
+    },
     {
       id: 1,
       title: projectT("blogCardosoTitle"),
@@ -132,6 +142,7 @@ const skills = [
       { name: "JavaScript", icon: <Zap className="h-4 w-4" /> },
       { name: "TypeScript", icon: <Code className="h-4 w-4" /> },
       { name: "React", icon: <Layers className="h-4 w-4" /> },
+      { name: "React Native", icon: <Layers className="h-4 w-4" /> },
       { name: "Next.js", icon: <Globe className="h-4 w-4" /> },
       { name: "Gatsby", icon: <Globe className="h-4 w-4" /> },
       { name: "Tailwind CSS", icon: <PenTool className="h-4 w-4" /> },
