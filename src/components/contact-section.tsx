@@ -60,14 +60,14 @@ const ContactSection = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
-              href="mailto:oscar@cardoso.dev"
+              href="mailto:oscar1w2e@gmail.com"
               className="bg-card hover:bg-muted text-foreground p-4 rounded-full transition-colors"
             >
               <Mail className="h-6 w-6" />
               <span className="sr-only">Email</span>
             </a>
           </div>
-          <a href="mailto:oscar@cardoso.dev">
+          <a href="mailto:oscar1w2e@gmail.com">
             <Button
               asChild
               className="bg-indigo-600 hover:bg-indigo-700 text-white"

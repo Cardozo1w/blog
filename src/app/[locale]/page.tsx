@@ -5,6 +5,9 @@ import Footer from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import ContactSection from "@/components/contact-section";
 import { getTranslations } from "next-intl/server";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Github, Linkedin, Mail } from "lucide-react";
 interface Props {
   params: {
     locale: string;
@@ -29,15 +32,40 @@ export default async function IndexPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <section className="relative bg-slate-100 dark:bg-muted/30 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              {t("heroTitle")}
+            <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
+              Hola, soy{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Oscar Cardoso
+              </span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t("heroAbout")}
+
+            <p className="mb-8 text-xl sm:text-2xl text-muted-foreground text-balance leading-relaxed">
+              {t("heroSummary")}
             </p>
+
+            <div className="mt-12 flex items-center justify-center gap-4">
+              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                <Link href="https://github.com/Cardozo1w" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                <Link href="https://www.linkedin.com/in/oscar2so/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                <Link href="mailto:oscar1w2e@gmail.com">
+                  <Mail className="h-5 w-5" />
+                  <span className="sr-only">Email</span>
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
